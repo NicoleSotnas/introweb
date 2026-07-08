@@ -76,17 +76,138 @@
           <h2>Cadastro Contato</h2>
           <form class="form-contato" method="post" action="servidor.php">
             <fieldset>
-              <legend>Login</legend>
-              <label for="nome">Nome:</label><br />
-              <input
-                type="text"
-                name="nome"
-                id="nome"
-                placeholder="Digite o seu nome"
-                required
-                minlength="2"
-                maxlength="15"
-              />
+              <fieldset>
+                <legend>Login</legend>
+                <label for="nome">Nome:</label><br />
+                <input
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  placeholder="Digite o seu nome"
+                  required
+                  minlength="3"
+                />
+                <br />
+                <label for="idade">Idade</label><br />
+                <input
+                  type="number"
+                  name="idade"
+                  id="idade"
+                  placeholder="Informe a sua idade"
+                  min="18"
+                  max="120"
+                  required
+                />
+                <br />
+
+                <label>Genêro</label><br />
+                <select name="category" id="input-category">
+                  <option value="">Selecione...</option>
+                  <option value="feminino">Femenino</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="oitro">Outros</option>
+                </select>
+                <br />
+                <label for="genero">Outra opção</label><br />
+                <textarea
+                  id="genero"
+                  name="genero"
+                  rows="2"
+                  cols="30"
+                  maxlength="25"
+                  placeholder="Digite a outra opção aqui..."
+                ></textarea>
+
+                <br />
+              </fieldset>
+              <br />
+              <fieldset>
+                <legend>Demais Informações</legend>
+                <label for="email">Email:</label><br />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Digite o seu email"
+                  required
+                  minlength="3"
+                />
+                <br />
+                <label for="senha">Senha</label><br />
+                <input
+                  type="password"
+                  name="senha"
+                  id="senha"
+                  placeholder="Informe a sua senha"
+                  minlength="8"
+                  required
+                />
+
+                <br />
+                <br />
+
+                <label>Tipo de Cliente</label><br />
+                <input
+                  type="radio"
+                  name="client-type"
+                  id="radio-pf"
+                  value="pf"
+                />
+                <label for="radio-pf">Pessoa Física</label>
+                <br />
+                <input
+                  type="radio"
+                  name="client-type"
+                  id="radio-pj"
+                  value="pj"
+                />
+                <label for="radio-pj">Pessoa Jurídica</label>
+                <br />
+              </fieldset>
+
+              <br />
+              <fieldset>
+                <legend>Ofertas de Email</legend>
+                <input
+                  type="checkbox"
+                  name="preferences"
+                  id="check-offers"
+                  value="offers"
+                  checked
+                />
+                <label for="check-offers">Receber ofertas</label>
+                <br />
+                <input
+                  type="checkbox"
+                  name="preferences"
+                  id="check-news"
+                  value="news"
+                />
+                <label for="check-news">Newsletter</label>
+                <br />
+                <input
+                  type="checkbox"
+                  name="preferences"
+                  id="check-sup"
+                  value="sup"
+                />
+                <label for="check-sup">Suporte</label>
+              </fieldset>
+              <br />
+              <fieldset>
+                <legend>Mensagem Livre</legend>
+                <label for="comentario"> Deixe sua mensagem:</label><br />
+                <textarea
+                  id="comentario"
+                  name="comentario"
+                  rows="4"
+                  cols="50"
+                  maxlength="150"
+                  placeholder="Digite sua mensagem aqui..."
+                ></textarea>
+              </fieldset>
+              <br />
+              <input type="submit" value="Enviar" />
             </fieldset>
           </form>
         </section>
