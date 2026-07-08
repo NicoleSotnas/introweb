@@ -35,7 +35,6 @@
         <section class="products list">
           <h3>Lista de Produtos</h3>
 
-          <h1>Tabelas</h1>
           <table border="1">
             <thead>
               <tr>
@@ -72,6 +71,26 @@
           </table>
         </section>
 
+        <!--Formulário-->
+        <section id="contato">
+          <h2>Cadastro Contato</h2>
+          <form class="form-contato" method="post" action="servidor.php">
+            <fieldset>
+              <legend>Login</legend>
+              <label for="nome">Nome:</label><br />
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="Digite o seu nome"
+                required
+                minlength="2"
+                maxlength="15"
+              />
+            </fieldset>
+          </form>
+        </section>
+
         <article>
           <h3>Notebook</h3>
           <p>Detalhes do Notebok</p>
@@ -80,10 +99,6 @@
           <h3>Teclado</h3>
           <p>Detalhes do teclado</p>
         </article>
-      </section>
-      <section class="contact" id="contatos">
-        <h2>Contato</h2>
-        <p>Email: contato@minhaloja.com</p>
       </section>
     </main>
     <footer class="footer">
