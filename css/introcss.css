@@ -1,0 +1,65 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #00008B;
+    color: #E0FFFF;
+    /*background-color: rgb(0,0,128);*/
+    /*font-family: 'Courier New', Courier, monospace;*/
+    /*font-family: 'Times New Roman', Times, serif;*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+    /*font-size: 15px;*/
+    /*font-size: 2vw; */ /*muda o tamanha de acordo com a largura da tela*/
+}
+
+h2, h3{
+    font-weight: 300;/*espessura da fonte*/
+}
+/*ao passar o mouse sobre o linl*/
+a{
+    color: #00FF00;
+    text-decoration: none;
+    
+}
+a:hover{
+    text-decoration: underline;
+    background-color: rgb(2, 238, 246);
+    color: brown;
+    transition: 2s;
+}
+
+h1 {
+    color: blue;
+    background-color: cornflowerblue;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* id intro */
+#intro{
+    background-color: darkblue;
+    padding: 20px;
+    /*margin: 10px;*/
+    /*padding-left: 30px ;*/
+    /*padding-top: 20px;*/
+    /*padding: 10px 20px 30px 40px;*/ /*Sentido do relógio 12h, 03h, 06h, 09h*/ 
+    /*padding: 10px 50px */ /*10px Cima e Embaixo 50px Esqueda e Direita*/
+
+    width: 200px;
+    height: 500px;
+
+    border: 2px solid /*dashed*/ /*dotted*/ /*double*/ darkred;
+    border-radius: 8px; /*arredonda as bordas*/
+}
+
+p{
+    margin: 20px;
+}
