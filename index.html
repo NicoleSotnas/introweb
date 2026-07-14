@@ -4,270 +4,123 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <!--Cabeçalho-->
-    <header class="header">
-      <h1>Minha Loja</h1>
+    <!--Cabeçalho -->
+    <header class="header" id="home">
+      <h1>Minha Loja Online</h1>
+
       <nav class="nav-menu">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#contatos">Contato</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
     </header>
+
     <main id="home">
-      <section class="products" id="produtos">
-        <h2>Produtos em destaque</h2>
-
-        <article>
-          <h3>Notebook</h3>
-          <figure>
-            <img src="../img/notebook.jpg" width="100" />
-            <figcaption>Notebook Lenovo IdeaPad Slim 3</figcaption>
-          </figure>
-          <p>Detalhes do Notebook</p>
-        </article>
-        <article>
-          <h3>Teclado</h3>
-          <figure>
-            <img src="../img/teclado.jpg" width="100" />
-            <figcaption>Teclado USB Preto Office</figcaption>
-          </figure>
-          <p>Detalhes do teclado</p>
-        </article>
-
-        <p>Video Promocional</p>
-        <section class="promo-video">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/a4cA0ET9DRY?si=uJhThXS7S-EMIauG"
-            title="YouTube video player"
-            frameborder="0"
-            allow="
-              accelerometer;
-              autoplay;
-              clipboard-write;
-              encrypted-media;
-              gyroscope;
-              picture-in-picture;
-              web-share;
-            "
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </section>
-
-        <!--Lista de Categorias-->
-        <aside class="categories">
-          <h3>Categorias</h3>
-          <ul>
-            <li>Eletrônicos</li>
-            <li>Roupas</li>
-            <li>Acessórios</li>
-          </ul>
-        </aside>
-
-        <!--Tabela de Produtos-->
-        <section class="products list">
-          <h3>Lista de Produtos</h3>
-
-          <table border="1">
-            <thead>
-              <tr>
-                <!--linha-->
-                <th>Produtos</th>
-                <!--Titulo-->
-                <th>Preços</th>
-                <th>Categorias</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Notebook Pro</td>
-                <!--dados daquela linha-->
-                <td>8.000,25</td>
-                <td>Eletrônicos</td>
-              </tr>
-              <tr>
-                <td>Celular</td>
-                <td>1.500,00</td>
-                <td>Eletrônicos</td>
-              </tr>
-              <tr>
-                <td>Mouse</td>
-                <td>180,00</td>
-                <td>TI</td>
-              </tr>
-              <tr>
-                <td>Teclado</td>
-                <td>200,00</td>
-                <td>TI</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <!--Formulário-->
-        <section id="contato">
-          <h2>Cadastro Contato</h2>
-          <form class="form-contato" method="post" action="servidor.php">
-            <fieldset>
-              <fieldset>
-                <legend>Login</legend>
-                <label for="nome">Nome:</label><br />
-                <input
-                  type="text"
-                  name="nome"
-                  id="nome"
-                  placeholder="Digite o seu nome"
-                  required
-                  minlength="3"
-                />
-                <br />
-                <label for="idade">Idade</label><br />
-                <input
-                  type="number"
-                  name="idade"
-                  id="idade"
-                  placeholder="Informe a sua idade"
-                  min="18"
-                  max="120"
-                  required
-                />
-                <br />
-
-                <label>Genêro</label><br />
-                <select name="category" id="input-category">
-                  <option value="">Selecione...</option>
-                  <option value="feminino">Femenino</option>
-                  <option value="masculino">Masculino</option>
-                  <option value="oitro">Outros</option>
-                </select>
-                <br />
-                <label for="genero">Outra opção</label><br />
-                <textarea
-                  id="genero"
-                  name="genero"
-                  rows="2"
-                  cols="30"
-                  maxlength="25"
-                  placeholder="Digite a outra opção aqui..."
-                ></textarea>
-
-                <br />
-              </fieldset>
-              <br />
-              <fieldset>
-                <legend>Demais Informações</legend>
-                <label for="email">Email:</label><br />
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Digite o seu email"
-                  required
-                  minlength="3"
-                />
-                <br />
-                <label for="senha">Senha</label><br />
-                <input
-                  type="password"
-                  name="senha"
-                  id="senha"
-                  placeholder="Informe a sua senha"
-                  minlength="8"
-                  required
-                />
-
-                <br />
-                <br />
-
-                <label>Tipo de Cliente</label><br />
-                <input
-                  type="radio"
-                  name="client-type"
-                  id="radio-pf"
-                  value="pf"
-                />
-                <label for="radio-pf">Pessoa Física</label>
-                <br />
-                <input
-                  type="radio"
-                  name="client-type"
-                  id="radio-pj"
-                  value="pj"
-                />
-                <label for="radio-pj">Pessoa Jurídica</label>
-                <br />
-              </fieldset>
-
-              <br />
-              <fieldset>
-                <legend>Ofertas de Email</legend>
-                <input
-                  type="checkbox"
-                  name="preferences"
-                  id="check-offers"
-                  value="offers"
-                  checked
-                />
-                <label for="check-offers">Receber ofertas</label>
-                <br />
-                <input
-                  type="checkbox"
-                  name="preferences"
-                  id="check-news"
-                  value="news"
-                />
-                <label for="check-news">Newsletter</label>
-                <br />
-                <input
-                  type="checkbox"
-                  name="preferences"
-                  id="check-sup"
-                  value="sup"
-                />
-                <label for="check-sup">Suporte</label>
-              </fieldset>
-              <br />
-              <fieldset>
-                <legend>Mensagem Livre</legend>
-                <label for="comentario"> Deixe sua mensagem:</label><br />
-                <textarea
-                  id="comentario"
-                  name="comentario"
-                  rows="4"
-                  cols="50"
-                  maxlength="150"
-                  placeholder="Digite sua mensagem aqui..."
-                ></textarea>
-              </fieldset>
-              <br />
-              <input type="submit" value="Enviar" />
-            </fieldset>
-          </form>
-        </section>
+      <!--Banner-->
+      <section class="banner" aria-label="Destaque principal">
+        <h2>Promoções Imperdiveis</h2>
+        <p>Os Melhores produtos com os melhores preços</p>
       </section>
-      <br />
-      <fieldset>
-        <section class="store-location">
+
+      <!--Produtos com imagem-->
+      <section id="produtos">
+        <h2>Nossos Produtos</h2>
+
+        <article class="product-card">
+          <h3>Smartphone</h3>
+          <img src="../img/iphone.jpg" alt="Imagem de um Smartphone moderno" />
+          <p>Smartphone com alta tecnologia</p>
+        </article>
+
+        <article class="product-card">
+          <h3>Camiseta</h3>
+          <img src="../img/camisa.jpg" alt="Camiseta casual confortavel" />
+          <p>Camiseta de algodão premium.</p>
+        </article>
+      </section>
+
+      <!--Sobre-->
+      <section id="sobre" class="about">
+        <!--Video promocional-->
+        <section class="promo-video">
+          <h2>Conheça Nossa loja</h2>
+
+          <video controls width="300">
+            <source src="img/video.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo.
+          </video>
+        </section>
+
+        <!--Integração com iframe-->
+
+        <section class="location">
+          <h3>Nossa Localização</h3>
+
+          <iframe
+            src="https://www.youtube.com/embed/a4cA0ET9DRY?si=WXRjD9ngmuBGpHN7"
+            width="300"
+            height="200"
+            title="Vídeo externo"
+          >
+          </iframe>
+
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.0860050504857!2d-43.198323300000006!3d-22.9101984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f0c4e687185%3A0x973c7a140b9b61fa!2sEdif%C3%ADcio%20Eco%20Sapuca%C3%AD!5e0!3m2!1spt-BR!2sbr!4v1783607208181!5m2!1spt-BR!2sbr"
-            width="400"
-            height="300"
+            width="300"
+            height="200"
             style="border: 0"
+            ;
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"
-          ></iframe>
+            title="Maps"
+          >
+          </iframe>
         </section>
-      </fieldset>
+
+        <h2>Sobre a Loja</h2>
+        <p>
+          Somos uma loja dedicada a oferecer produtos de qualidade com os
+          melhores preços
+        </p>
+      </section>
+
+      <!--Contato-->
+      <section id="contato" class="contact">
+        <h2>Contato</h2>
+
+        <form aria-label="Formulário de contato">
+          <label for="nome">Nome:</label><br />
+          <input
+            type="text"
+            id="nome"
+            placeholder="Digite o seu nome"
+            required
+          /><br />
+
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            placeholder="Digite o seu email"
+            required
+            minlength="3"
+          />
+
+          <br />
+          <input type="submit" value="Enviar" />
+        </form>
+      </section>
     </main>
     <footer class="footer">
-      <p>Todos os direitos reservados</p>
+      <p>&copy; Todos os direitos reservados</p>
     </footer>
   </body>
 </html>
