@@ -5,14 +5,15 @@
     box-sizing: border-box;
 }
 body{
-    background-color: blueviolet;
+    background-color: rgb(105, 62, 146);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #geral{
-    width: 900px;
+    width: 650px;
+    height: 2500px;
     margin: 30px auto;
-    background-color:darkgreen;
+    background-color:darkolivegreen;
 }
 #bloco1, #bloco2{
     border: 3px solid black;
@@ -24,4 +25,77 @@ img{
     width: 200px;
     border:3px solid red;
 
+}
+
+/*Entendendo POSITION*/
+
+/*mouse*/
+/*POSITION static*/
+#img1{
+    position: static;/*No static, permanece estático e ignora parâmetro de movimentação*/
+    top: 100px;/*não funiona*/
+    left: 100px;/*não funciona*/
+
+}
+
+/*câmera*/
+/*POSITION relative*/
+
+/*OBS: o espaço original ocupado continua ocupado mesmo após a movimentação*/
+#img3{/*No relative, a posição do elemento é relativa 'a sua posição original*/
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+/*Position absolute*/
+
+/*elemento pai-> bloco1*/
+#bloco1{
+    position: relative;
+}
+
+/*elemento filho -> img2*/
+
+/*absolute - a posição do elemento é relativa ao seu elemento pai mais próximo que tenha position diferente de static*/
+/*OBS: o espaço original ocupado fica livre após a movimentação*/
+/*Fone*/
+#img2{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+/*position fixed*//*muito usado no menu*/
+/*controle*/
+#img4{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}/*
+-------------------------
+Z-INDEX
+-------------------------
+*/
+
+/*vamos testar o z-index com os blocos 1 e 2*/
+
+#bloco1{
+    position: relative;
+}
+
+#bloco2{
+    position: relative;
+    top: -120px;
+    left: 120px;
+}
+
+/*Agora sim, vamos conhecer o z-index*/
+/*quem tiver o maior número fica na frente*/
+#bloco1{
+    z-index: 2;
+}
+
+#bloco2{
+    z-index: 1;
 }
